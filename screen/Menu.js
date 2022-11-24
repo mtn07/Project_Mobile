@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native';
 import { FontAwesome5 } from "@expo/vector-icons";
 
 const Menu = ({navigation}) => {
@@ -14,14 +14,20 @@ const Menu = ({navigation}) => {
           </View>
           <Text>ข่าวสาร</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box2}>
+        <TouchableOpacity style={styles.box2}
+        onPress={() => {navigation.navigate('MenuDNavigator')}}>
           <View style={styles.img1}>
             <FontAwesome5 name="list" style={styles.img2}/>
           </View>
           <Text>วินิจฉัย</Text>
           <Text>ตามชนิดพืช</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box3}>
+        <TouchableOpacity style={styles.box3}
+         onPress={() => {
+          Linking.openURL(
+            "https://www.fourfarm.com/category/%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3/"
+          );
+        }}>
           <View style={styles.img1}>
             <FontAwesome5 name="search" style={styles.img2}/>
           </View>
@@ -46,7 +52,8 @@ const Menu = ({navigation}) => {
           <Text style={{fontSize: 12}}>เตือนการระบาด</Text>
           <Text style={{fontSize: 12}}>ของศัตรูพืช</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box6}>
+        <TouchableOpacity style={styles.box6}
+        onPress={() => {navigation.navigate('ContactDev')}}>
           <View style={styles.img1}>
             <FontAwesome5 name="envelope" style={styles.img2}/>
           </View>
@@ -62,7 +69,8 @@ const Menu = ({navigation}) => {
           <Text>วินิจฉัย</Text>
           <Text>ศัตรูพืชเบื้องต้น</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box8}>
+        <TouchableOpacity style={styles.box8}
+        onPress={() => {navigation.navigate('Weather')}}>
           <View style={styles.img1}>
             <FontAwesome5 name="cloud" style={styles.img2}/>
           </View>

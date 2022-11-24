@@ -12,7 +12,7 @@ import { Button, Image, SearchBar } from "@rneui/base";
 import firebase from "../database/firebaseDB";
 
 
-const PtFromD2 = ({navigation}) => {
+const DRice = ({navigation}) => {
   
   const [fruit_list, setfruit_list] = useState([]);
   const [filtered_list, setfiltered_list] = useState([]);
@@ -53,7 +53,7 @@ const PtFromD2 = ({navigation}) => {
     bookmark) => {
     const updateBookmarkDoc = firebase
       .firestore()
-      .collection("Fruits")
+      .collection("Rice")
       .doc(key);
     updateBookmarkDoc
       .set({
@@ -72,7 +72,7 @@ const PtFromD2 = ({navigation}) => {
   }
 
   useEffect(() => {
-    const fruitCollection = firebase.firestore().collection("Fruits");
+    const fruitCollection = firebase.firestore().collection("Rice");
     const unsubscribe = fruitCollection.onSnapshot(getCollection);
     return () => {
       unsubscribe();
@@ -230,4 +230,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default PtFromD2;
+export default DRice;

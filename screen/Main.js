@@ -1,6 +1,8 @@
 import { FontAwesome5 } from "@expo/vector-icons";
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet} from "react-native";
+import Iframe from 'react-iframe'
+import { WebView } from 'react-native-webview';
 
 
 const Main = ({navigation}) => {
@@ -18,6 +20,7 @@ const Main = ({navigation}) => {
                     <Text style={styles.info1}>  <FontAwesome5 name="newspaper"/> ข้อมูลเบื้องต้น   </Text>
                     <Text style={styles.info2}>  <FontAwesome5 name="clipboard"/> การวินิจฉัยศัตรูพืช   </Text>
                     </View>
+                    
                 </View>
         </TouchableOpacity>
 

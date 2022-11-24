@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
     justifyContent: 'center',
     borderRadius: 50,
-    marginBottom: 20
+    marginBottom: 20,
+    alignItems: 'center'
   },
   box3: {
     width: '80%',

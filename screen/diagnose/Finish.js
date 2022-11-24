@@ -41,8 +41,7 @@ const styles = StyleSheet.create({
   },
   txt2: {
     marginTop: 30,
-    marginBottom: 30,
-    alignItems: 'center'
+    marginBottom: 30
   },
   txt3: {
     alignItems: 'center'
@@ -53,7 +52,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
     justifyContent: 'center',
     borderRadius: 50,
-    marginBottom: 20
+    marginBottom: 20,
+    alignItems: 'center'
   },
   box3: {
     width: '80%',

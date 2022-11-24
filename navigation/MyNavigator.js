@@ -36,11 +36,18 @@ import Finish2 from "../screen/diagnose/Finish2";
 import Finish3 from "../screen/diagnose/Finish3";
 import Finish4 from "../screen/diagnose/Finish4";
 import Finish5 from "../screen/diagnose/Finish5";
+import Weather from "../screen/Weather";
+import ContactDev from "../screen/ContactDev";
+import MenuDiag from "../screen/MenuDiag";
+import DVeg from "../screen/DVeg";
+import DRice from "../screen/DRice";
+import DFlowerer from "../screen/DFlowerer";
 
 const Tab = createBottomTabNavigator();
 const MainNavigation = createNativeStackNavigator();
 const MenuNavigation = createNativeStackNavigator();
 const MenuPNavigation = createNativeStackNavigator();
+const MenuDNavigation = createNativeStackNavigator();
 const DiagnoseNavigation = createNativeStackNavigator();
 
 
@@ -52,7 +59,6 @@ function MenuNavigator() {
     >
       <MenuNavigation.Screen name="Menu" component={Menu}/>
       <MenuNavigation.Screen name="NewsPage" component={NewsPage}/>
-      
       <MenuNavigation.Screen name="PtFromP" component={PtFromP}/>
       <MenuNavigation.Screen name="PtFromD2" component={PtFromD2}/>
       <MenuNavigation.Screen name="Ptflowers" component={Ptflowers}/>
@@ -64,7 +70,10 @@ function MenuNavigator() {
       <MenuNavigation.Screen name="MenuProtect" component={MenuProtect}/>
       <MenuNavigation.Screen name="MenuPNavigator" component={MenuPNavigator}/>
       <MenuNavigation.Screen name="DiagnoseNavigator" component={DiagnoseNavigator}/>
+      <MenuNavigation.Screen name="MenuDNavigator" component={MenuDNavigator}/>
       <MenuNavigation.Screen name="AlertPage" component={AlertPage}/>
+      <MenuNavigation.Screen name="Weather" component={Weather}/>
+      <MenuNavigation.Screen name="ContactDev" component={ContactDev}/>
     </MenuNavigation.Navigator>
   );
 }
@@ -84,6 +93,22 @@ function MenuPNavigator() {
       <MenuPNavigation.Screen name="Ptveg" component={Ptveg}/>
       <MenuPNavigation.Screen name="ShowInfo" component={Showinfo}/>
     </MenuPNavigation.Navigator>
+  );
+}
+
+function MenuDNavigator() {
+  return (
+    <MenuDNavigation.Navigator
+      screenOptions={{ headerShown: false}}
+      initialRouteName="MenuDiagnostic"
+    >
+      <MenuDNavigation.Screen name="MenuDiag" component={MenuDiag}/>
+      <MenuDNavigation.Screen name="PtFromD2" component={PtFromD2}/>
+      <MenuDNavigation.Screen name="DVeg" component={DVeg}/>
+      <MenuDNavigation.Screen name="DRice" component={DRice}/>
+      <MenuDNavigation.Screen name="DFlowerer" component={DFlowerer}/>
+      <MenuDNavigation.Screen name="ShowInfo" component={Showinfo}/>
+    </MenuDNavigation.Navigator>
   );
 }
 
